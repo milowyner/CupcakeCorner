@@ -7,48 +7,29 @@
 
 import SwiftUI
 
-struct Response: Codable {
-    var results: [Result]
-}
-
-struct Result: Codable {
-    var trackId: Int
-    var trackName: String
-    var collectionName: String
-}
-
 struct ContentView: View {
-    @State private var results = [Result]()
+    @State private var username = ""
+    @State private var email = ""
     
-    var body: some View {
-        List(results, id: \.trackId) { item in
-            VStack(alignment: .leading) {
-                Text(item.trackName)
-                    .font(.headline)
-                Text(item.collectionName)
-            }
-        }
-        .onAppear(perform: loadData)
+    var disableForm: Bool {
+        username.count < 5 || email.count < 5
     }
-    
-    func loadData() {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else {
-            print("Invalid URL")
-            return
-        }
-        let request = URLRequest(url: url)
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data,
-               let decodedResponse = try? JSONDecoder().decode(Response.self, from: data) {
-                DispatchQueue.main.async {
-                    results = decodedResponse.results
-                }
-                return
-            } else {
-                print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+
+    var body: some View {
+        Form {
+            Section {
+                TextField("Username", text: $username)
+                TextField("Email", text: $email)
             }
-        }.resume()
+
+            Section {
+                Button("Create account") {
+                    print("Creating account…")
+                }
+                .disabled(disableForm)
+            }
+
+        }
     }
 }
 
