@@ -11,7 +11,22 @@ struct CheckoutView: View {
     @ObservedObject var order: Order
     
     var body: some View {
-        Text("Hello, World!")
+        ScrollView {
+            VStack {
+                Image("cupcakes")
+                    .resizable()
+                    .scaledToFit()
+                
+                Text("Your total is $\(order.cost, specifier: "%.2f")")
+                    .font(.title)
+                
+                Button("Place order") {
+                    // place the order
+                }
+                .padding()
+            }
+        }
+        .navigationBarTitle("Check out", displayMode: .inline)
     }
 }
 
