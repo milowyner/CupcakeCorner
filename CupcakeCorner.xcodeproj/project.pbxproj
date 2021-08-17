@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A8A8F126CB419700743531 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8A8F026CB419700743531 /* Order.swift */; };
+		05A8A8F326CB45DA00743531 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8A8F226CB45DA00743531 /* AddressView.swift */; };
 		05CD583726CB107D006780D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD583626CB107D006780D2 /* AppDelegate.swift */; };
 		05CD583926CB107D006780D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD583826CB107D006780D2 /* SceneDelegate.swift */; };
 		05CD583B26CB107D006780D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD583A26CB107D006780D2 /* ContentView.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05A8A8F026CB419700743531 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		05A8A8F226CB45DA00743531 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		05CD583326CB107D006780D2 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CD583626CB107D006780D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CD583826CB107D006780D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				05CD583626CB107D006780D2 /* AppDelegate.swift */,
 				05CD583826CB107D006780D2 /* SceneDelegate.swift */,
 				05CD583A26CB107D006780D2 /* ContentView.swift */,
+				05A8A8F226CB45DA00743531 /* AddressView.swift */,
+				05A8A8F026CB419700743531 /* Order.swift */,
 				05CD583C26CB107F006780D2 /* Assets.xcassets */,
 				05CD584126CB107F006780D2 /* LaunchScreen.storyboard */,
 				05CD584426CB107F006780D2 /* Info.plist */,
@@ -147,7 +153,9 @@
 			files = (
 				05CD583726CB107D006780D2 /* AppDelegate.swift in Sources */,
 				05CD583926CB107D006780D2 /* SceneDelegate.swift in Sources */,
+				05A8A8F126CB419700743531 /* Order.swift in Sources */,
 				05CD583B26CB107D006780D2 /* ContentView.swift in Sources */,
+				05A8A8F326CB45DA00743531 /* AddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +299,7 @@
 				DEVELOPMENT_TEAM = 6NZ2YFKUT7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CupcakeCorner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +321,7 @@
 				DEVELOPMENT_TEAM = 6NZ2YFKUT7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CupcakeCorner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
