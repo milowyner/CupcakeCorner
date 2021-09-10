@@ -20,6 +20,7 @@ struct CheckoutView: View {
                 Image("cupcakes")
                     .resizable()
                     .scaledToFit()
+                    .accessibility(hidden: true)
                 
                 Text("Your total is $\(wrapper.order.cost, specifier: "%.2f")")
                     .font(.title)
